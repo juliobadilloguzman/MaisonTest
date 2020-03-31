@@ -1,0 +1,208 @@
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+}
+
+.bg {
+    background: url('/assets/img/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    align-content: space-between;
+}
+
+.bgcolor {
+    background: url('/assets/img/bgcolor.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    align-content: center;
+}
+
+.logo {
+    padding: 3rem;
+    img {
+        max-width: 10rem;
+        height: auto;
+    }
+}
+
+.description {
+    margin-bottom: 5rem;
+    padding: 5rem;
+    h2 {
+        font-size: 2.5rem;
+        font-weight: 300;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 1.5rem;
+    }
+    h6 {
+        font-size: 1rem;
+        font-weight: 300;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.btn-container {
+    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 1rem;
+    .btn-login {
+        background-color: #00debb;
+        border: none;
+        outline: none;
+        padding: 0.5rem;
+        color: #fff;
+        font-size: 0.9rem;
+        cursor: pointer;
+        transition: 500ms all ease;
+    }
+    .btn-signup {
+        background-color: #5dbecd;
+        border: none;
+        outline: none;
+        padding: 0.7rem;
+        color: #fff;
+        font-size: 0.9rem;
+        cursor: pointer;
+        transition: 500ms all ease;
+    }
+    .btn-login:hover {
+        background-color: #03b69b;
+        -webkit-box-shadow: -1px 0px 25px -8px rgba(0, 0, 0, 0.38);
+        -moz-box-shadow: -1px 0px 25px -8px rgba(0, 0, 0, 0.38);
+        box-shadow: -1px 0px 25px -8px rgba(0, 0, 0, 0.38);
+    }
+    .btn-signup:hover {
+        background-color: #438b96;
+        -webkit-box-shadow: -1px 0px 25px -8px rgba(0, 0, 0, 0.38);
+        -moz-box-shadow: -1px 0px 25px -8px rgba(0, 0, 0, 0.38);
+        box-shadow: -1px 0px 25px -8px rgba(0, 0, 0, 0.38);
+    }
+}
+
+form {
+    // background: #000;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: center;
+    grid-column-gap: 2rem;
+    grid-row-gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    .sliderPrecio,
+    p {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    p {
+        color: #fff;
+    }
+    select {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        -webkit-appearance: initial;
+        background: #fff;
+        padding: 0.8rem;
+        border: none;
+        outline: none;
+        color: #b6b6b6;
+        font-size: 0.9rem;
+        border-radius: 0px !important;
+        border: 1px solid #efefef;
+        -webkit-box-shadow: 0px 0px 14px -7px rgba(0, 0, 0, 0.25);
+        -moz-box-shadow: 0px 0px 14px -7px rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 0px 14px -7px rgba(0, 0, 0, 0.25);
+    }
+    input {
+        width: 100%;
+        padding: 0.8rem;
+        border: none;
+        outline: none;
+        color: #b6b6b6 !important;
+        font-size: 0.9rem;
+        -webkit-box-shadow: 0px 0px 14px -7px rgba(0, 0, 0, 0.25);
+        -moz-box-shadow: 0px 0px 14px -7px rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 0px 14px -7px rgba(0, 0, 0, 0.25);
+    }
+    button {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        border: none;
+        outline: none;
+        background: none;
+        padding: 0.8rem;
+        border: 2px solid #fff;
+        font-size: 1rem;
+        color: #fff;
+        cursor: pointer;
+        transition: 400ms all ease;
+    }
+    button:hover {
+        -webkit-box-shadow: 0px 0px 14px -3px rgba(0, 0, 0, 0.46);
+        -moz-box-shadow: 0px 0px 14px -3px rgba(0, 0, 0, 0.46);
+        box-shadow: 0px 0px 14px -3px rgba(0, 0, 0, 0.46);
+    }
+}
+
+@media(max-width: 900px) {
+    form {
+        display: block;
+        input,
+        select {
+            margin-bottom: 1rem;
+        }
+        padding: 3rem;
+        button {
+            width: 100% !important;
+            display: block !important;
+        }
+    }
+}
+
+@media(max-width:1200px) {
+    .btn-container {
+        width: 90%;
+    }
+}
+
+@media(max-width:800px) {
+    .btn-container {
+        width: 100%;
+    }
+}
+
+@media(max-width: 750px) {
+    .container {
+        grid-template-columns: 1fr !important;
+    }
+    .bg {
+        display: none;
+    }
+    form {
+        display: block;
+        input,
+        select {
+            margin-bottom: 1rem;
+        }
+        padding: 3rem;
+        button {
+            width: 100% !important;
+            display: block !important;
+        }
+    }
+}
+
+.blackbg {
+    background-color: #fff;
+}
